@@ -41,10 +41,13 @@
 
     .hcm-on svg tspan {}
     
-    .shadow-focus {}
+    .shadow-focus {
+      -ms-high-contrast-adjust: none;
+    }
     
     .shadow-focus:focus {
       box-shadow: 0 0 0 2px #fff, 0 0 0 6px #009de6;
+      -ms-high-contrast-adjust: none;
     }
 
 
@@ -166,5 +169,6 @@
   <h3>Example with Shadow-Focus</h3>
   <p>This is an element with a CSS shadow focus. This isn't available in HCM</p>
   <a class="shadow-focus" href="#">Link</a>
+  <br />
 </body>
 </html>
