@@ -42,10 +42,11 @@
     .hcm-on svg tspan {}
     
     .shadow-focus {
-      -ms-high-contrast-adjust: none;
+      /*-ms-high-contrast-adjust: none;*/
     }
     
     .shadow-focus:focus {
+      outline: none;
       box-shadow: 0 0 0 2px #fff, 0 0 0 6px #009de6;
       -ms-high-contrast-adjust: none;
     }
@@ -70,9 +71,14 @@
       .example {
         background-image: url('image-bw.png');
       }
+      
+      .shadow-focus:focus {
+        color: black; /* change the colour of the shadow to black */
+      }
     }
     @media screen and (-ms-high-contrast: white-on-black) {
       .example { background-image: url('image-wb.png'); }
+      .shadow-focus:focus { color: white; }
     }
 
   </style>
