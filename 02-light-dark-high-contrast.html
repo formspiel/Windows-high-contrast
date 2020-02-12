@@ -46,6 +46,15 @@
         @media (prefers-reduced-motion: reduce) {} /* ready to use */
         /* Full overview: https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries */
 
+        @supports (color: color(p3 0 0 0)) {
+            /* NOTE: Proposed syntax. Not yet implemented. 2015! */
+
+            :root {
+                --color-brand-01: p3 1.0 0 0; /* 100% red in the P3 color space */
+            }
+
+        }
+
         /* ========== Styles ========== */
 
         * {
@@ -82,14 +91,18 @@
     </style>
 </head>
 <body>
-    <div class="box">Hello 👋🏻</div>
+    <div role="none" class="box">Hello 👋🏻</div>
 
     <hr />
     <picture>
-        <source srcset="https://dummyimage.com/200x400/000/fff&text=the-new-forced-darkness" media="(forced-colors: active)">
-        <source srcset="https://dummyimage.com/200x400/000/fff&text=dark-as-hell" media="(prefers-color-scheme: dark)">
-        <source srcset="https://dummyimage.com/200x400/000/fff&text=good-ol-high-contrast" media="(-ms-high-contrast: active)">
-        <img src="https://dummyimage.com/200x400/fff/000&text=bright-as-my-future">
+        <source media="(color-gamut: p3)" srcset="https://dummyimage.com/200x400/000/fff&text=hell-of-colours" />
+
+        <source media="(forced-colors: active)" srcset="https://dummyimage.com/200x400/000/fff&text=the-new-forced-darkness" />
+        <source media="(prefers-color-scheme: dark)" srcset="https://dummyimage.com/200x400/000/fff&text=dark-as-hell" />
+        <source media="(-ms-high-contrast: active)" srcset="https://dummyimage.com/200x400/000/fff&text=good-ol-high-contrast" />
+        
+        <img src="https://dummyimage.com/200x400/fff/000&text=bright-as-my-future" alt="" />
     </picture>
+
 </body>
 </html>

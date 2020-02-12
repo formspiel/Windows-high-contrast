@@ -1,0 +1,58 @@
+
+/* Definition of varibales */ 
+
+:root {
+    --color-box:  hsl(0, 0%, 75%);
+}
+
+/* Change variable for specific condition */
+
+@media (prefers-color-scheme: dark) {
+        
+    :root {
+        --color-box:  hsl(0, 0%, 20%);
+    }
+}
+
+/* Use variable to style an element */
+.box {
+    background-color: var(--color-box);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========== Derf's a bisserl mehr sein? ========== */
+
+:root {
+    --baseHue: 30;
+    --baseSaturation: 100%;
+    --baseLumnosity: 80%;
+    --baseDarkLumnosity: calc(var(--baseLumnosity) * 0.6);
+    --baseOpacity: 1;
+    
+    --linkColor: hsla(var(--baseHue), var(--baseSaturation), var(--baseLumnosity), var(--baseOpacity));
+    --linkColor-active: hsla(var(--baseHue), var(--baseSaturation), var(--baseDarkLumnosity), var(--baseOpacity));
+}
+
+a {
+    color: var(--link-color);
+}
+
+a:hover,
+a:active {
+    color: calc(var(--link-color)*1);
+}
