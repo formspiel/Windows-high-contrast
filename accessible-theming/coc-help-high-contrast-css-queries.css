@@ -1,0 +1,44 @@
+:root {
+  --color-bg: rgb(240,240,240);
+  --color-text: rgba(41, 41, 41, 1);
+  --color-link: rgb(100, 100, 100);
+
+  --alpha: 0.5;
+  /* background-color: rgba(var(--color), var(--alpha)); */
+}
+
+@supports (color: color(p3 0 0 0)) {
+
+    :root {
+        --color-bg: color(p3 1.0 0 0); /* 100% red in the P3 color space */
+    }
+
+}
+
+@media (prefers-color-scheme: dark) {
+
+    :root {
+        --color-bg: rgb(41, 41, 41);
+        --color-text: rgb(240,240,240);
+    }
+}
+
+@media (forced-colors) {
+
+    :root {
+        --color-bg: highlightText;
+
+        /* https://css-tricks.com/css-variables-calc-rgb-enforcing-high-contrast-colors/
+        rgba(
+            calc(var(--accessible-color) * -1),
+            calc(var(--accessible-color) * -1),
+            calc(var(--accessible-color) * -1),
+            0.25
+        )
+        */
+
+        /* https://css-tricks.com/reverse-text-color-mix-blend-mode/
+        */
+    }
+
+}

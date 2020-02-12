@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light, Dark and High Contrast Mode</title>
+    <style>
+        /* ========== Variables ========== */
+
+        :root {
+            color-scheme: light dark;
+
+            --height: 30vw;
+
+            --color-box:  hsl(0, 0%, 75%);
+            --color-bg:   hsl(0, 0%, 94%);
+            --color-text: hsl(0, 0%, 16%);
+            --color-link: hsl(0, 0%, 39%);
+        }
+
+        @media (prefers-color-scheme: dark) {
+        
+            :root {
+                --color-box:  hsl(0, 0%, 20%);
+                --color-bg:   hsl(0, 0%, 20%);
+                --color-text: hsl(0, 0%, 85%);
+                --color-link: hsl(0, 0%, 75%);
+            }
+        }
+
+        @media (forced-colors) {
+
+            :root {
+                --color-box: hsl(0, 0%, 20%);
+                --color-bg:   Canvas;
+                --color-text: CanvasText;
+                --color-link: ActiveText;
+            }
+
+        }
+        
+        @media (light-level: dim) {} /* not ready yet */
+        @media (prefers-contrast: high) {} /* not ready yet */
+        @media (prefers-reduced-transparency: reduce) {} /* not ready yet */
+       
+        @media (prefers-reduced-motion: reduce) {} /* ready to use */
+        /* Full overview: https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries */
+
+        /* ========== Styles ========== */
+
+        * {
+            font: normal 400 100%/1.4 sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--color-bg);
+        }
+
+        .box {
+            width: var(--height);
+            height: var(--height);
+            margin: auto;
+            color: var(--color-text);
+            background-color: var(--color-box);
+            border: 1px solid var(--color-text);
+            text-align: center;
+            line-height: var(--height);
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            .box::after {
+                content: " in the dark";
+            }
+        }
+
+        @media (forced-colors), (-ms-high-contrast: active)  {
+            .box::after {
+                content: " in the very dark";
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">Hello 👋🏻</div>
+
+    <hr />
+    <picture>
+        <source srcset="https://dummyimage.com/200x400/000/fff&text=the-new-forced-darkness" media="(forced-colors: active)">
+        <source srcset="https://dummyimage.com/200x400/000/fff&text=dark-as-hell" media="(prefers-color-scheme: dark)">
+        <source srcset="https://dummyimage.com/200x400/000/fff&text=good-ol-high-contrast" media="(-ms-high-contrast: active)">
+        <img src="https://dummyimage.com/200x400/fff/000&text=bright-as-my-future">
+    </picture>
+</body>
+</html>

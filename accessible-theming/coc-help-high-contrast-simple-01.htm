@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Windows&reg; High Contrast Mode 2020</title>
+  
+  <style>
+:root {
+	color-scheme: light dark;
+	
+	/* colors für "light" style */
+	--color-bg: Canvas; /* Background of application content or documents.*/
+	--color-text: CanvasText; /* Text in application content or documents.*/
+	--color-text--link: LinkText; /* Text in non-active, non-visited links.*/
+	--color-text--visited: VisitedText; /* Text in visited links.*/
+	--color-text--active: ActiveText; /* Text in active links.*/
+	--color-action--push: ButtonFace; /* The face background color for push buttons.*/
+	--color-action--push-text: ButtonText; /* Text on push buttons.*/
+	--color-action--input: Field; /* Background of input fields.*/
+	--color-action--input-text: FieldText; /* Text in input fields.*/
+	--color-action--selection-bg: Highlight; /* Background of item(s) selected in a control.*/
+	--color-action--selection-text: HighlightText; /* Text of item(s) selected in a control.*/
+	--color-text--disabled: GrayText; /* Disabled text. (Often, but not necessarily, gray.)*/
+}
+
+@media screen and (prefers-contrast: high) {
+	/* colors für "more contrast" style */
+	--color-text--link: LinkText;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+	/* colors für "dark" style */
+}
+
+@media screen and (-ms-high-contrast: active), (forced-colors: active) {
+	/* colors für "light" style */
+
+	:root {
+		/* overwrite colors with Windows system colors */
+		--color-bg: Canvas;
+		--color-text: CanvasText;
+		--color-text--link: LinkText;
+		--color-text--visited: VisitedText;
+		--color-text--active: ActiveText;
+		--color-action--push: ButtonFace;
+		--color-action--push-text: ButtonText;
+		--color-action--input: Field;
+		--color-action--input-text: FieldText;
+		--color-action--selection-bg: Highlight;
+		--color-action--selection-text: HighlightText;
+		--color-text--disabled: GrayText;
+	}
+
+}
+  
+  * { box-sizing: border-box }
+
+    body {
+     font-family: sans-serif;
+     font-size: 100%;
+	 color: var(--color-text);
+     background-color: var(--color-bg);
+    }
+	
+	.example {
+		border: 1px solid transparent;
+	}
+	
+	@media screen and (-ms-high-contrast: active), (prefers-color-scheme: dark), (forced-colors: active) {
+	
+	.example {
+        background-image: url('https://dummyimage.com/200x400/000/fff&text=its-dark-here');
+      }
+	
+	}
+	
+  </style>
+</head>
+<body>
+	<header>
+		<h1>Windows &reg; High Contrast Mode (Theme) for Developers</h1>
+	</header>
+	
+	<main>
+		<div class="example">Sample Content</div>
+		<p>Lorem ipsum dolor sit amet</p>
+  
+	<picture>
+		<source srcset="https://dummyimage.com/200x400/000/fff&text=the-new-forced-darkness" media="(forced-colors: active)">
+		<source srcset="https://dummyimage.com/200x400/000/fff&text=dark-as-hell" media="(prefers-color-scheme: dark)">
+		<source srcset="https://dummyimage.com/200x400/000/fff&text=good-ol-high-contrast" media="(-ms-high-contrast: active)">
+		<img src="https://dummyimage.com/200x400/fff/000&text=bright-as-my-future">
+	</picture>
+</main>
+</body>
+</html>

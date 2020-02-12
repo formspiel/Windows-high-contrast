@@ -6,7 +6,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Windows&reg; Hochkontrast-Modus</title>
   <style>
-    * { box-sizing: border-box }
+    * {
+      font: normal 400 100%/1.4 sans-serif;
+      box-sizing: border-box;
+      }
+     
+      :root {
+        --height: 30vw;
+        
+        --color-main: hsl(0, 0%, 75%);
+        --color-bg:   hsl(0, 0%, 94%);
+        --color-text: hsl(0, 0%, 16%);
+        --color-link: hsl(0, 0%, 39%);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        
+        :root {
+          --color-main: hsl(0, 0%, 75%);
+        }
+      
+      }
+
+      @media (forced-colors) {
+        
+        :root {
+          --color-bg: highlightText;
+        }
+
+      }
+       
+       
+
+        .box {
+            width: var(--height);
+            height: var(--height);
+            margin: auto;
+            background-color: var(--color-main);
+            border: 1px solid transparent;
+            text-align: center;
+            line-height: var(--height);
+        }
 
     body {
      font-family: sans-serif;
