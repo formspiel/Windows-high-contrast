@@ -35,18 +35,21 @@ The old proprierary attribute where aliased:
 ```(prefers-contrast: high)```
 	/* https://drafts.csswg.org/mediaqueries-5/#prefers-contrast */
 
+Full media query example for old and new contrast mode support:
+```@media screen and (-ms-high-contrast: active), (forced-colors: active) {}```
+
 ## Windows System High Contrast Colours
-```
---color-bg: Canvas;								/* Background of application content or documents.*/
---color-text: CanvasText;						/* Text in application content or documents.*/
---color-text--link: LinkText;					/* Text in non-active, non-visited links.*/
---color-text--visited: VisitedText;				/* Text in visited links.*/
---color-text--active: ActiveText;				/* Text in active links.*/
---color-action--push: ButtonFace;				/* The face background color for push buttons.*/
---color-action--push-text: ButtonText;			/* Text on push buttons.*/
---color-action--input: Field;					/* Background of input fields.*/
---color-action--input-text: FieldText;			/* Text in input fields.*/
---color-action--selection-bg: Highlight;		/* Background of item(s) selected in a control.*/
---color-action--selection-text: HighlightText;	/* Text of item(s) selected in a control.*/
---color-text--disabled: GrayText;				/* Disabled text. (Often, but not necessarily, gray.)*/
-```
+| System Colour | Description |
+|---|---|
+| Canvas | Background of application content or documents.  |
+| CanvasText | Text in application content or documents. |
+| LinkText | Text in non-active, non-visited links. |
+| VisitedText | Text in visited links. |
+| ActiveText | Text in active links. |
+| ButtonFace | The face background color for push buttons. |
+| ButtonText | Text on push buttons. |
+| Field | Background of input fields. |
+| FieldText | Text in input fields. |
+| Highlight | Background of item(s) selected in a control. |
+| HighlightText | Text of item(s) selected in a control. |
+| GrayText | Disabled text. (Often, but not necessarily, gray.) |
