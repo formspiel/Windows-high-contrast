@@ -13,6 +13,7 @@ To be truly human-centred we should deliver the design in light mode, dark mode 
 * https://drafts.csswg.org/css-color/#css-system-colors
 * https://drafts.csswg.org/mediaqueries-5/#descdef-media-prefers-color-scheme	
 * https://hiddedevries.nl/en/blog/2018-12-24-making-single-color-svg-icons-work-in-dark-mode
+* https://ericwbailey.github.io/working-with-high-contrast-mode-talk/#/
 
 The old proprietary attribute where aliased:
 -ms-high-contrast to forced-colors
@@ -24,7 +25,7 @@ The old proprietary attribute where aliased:
 
 | CSS | Support |
 |---|---|
-| ```(-ms-high-contrast: active | ~black-on-white~ | white-on-black)``` | **macOS**: not supported; **Windows**: IE, Edge [Deprecated]  |
+| ```(-ms-high-contrast: active | black-on-white | white-on-black)``` | **macOS**: not supported; **Windows**: IE, Edge [Deprecated]  |
 | ```(prefers-color-scheme: dark)``` (Dark Mode not High Contrast mode) | **macOS**: Safari, Chrome; **Windows**: Safari, Chrome, Chredge (Chromium Edge) |
 | ```(forced-colors: active)``` | **macOS**: not supported; **Windows**: Chredge (Chromium Edge) |
 
