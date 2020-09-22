@@ -25,7 +25,7 @@ The old proprietary attribute where aliased:
 
 | CSS | Support |
 |---|---|
-| ```(-ms-high-contrast: active | black-on-white | white-on-black)``` | **macOS**: not supported; **Windows**: IE, Edge [Deprecated]  |
+| ```(-ms-high-contrast: active), (-ms-high-contrast: black-on-white), (-ms-high-contrast: white-on-black)``` | **macOS**: not supported; **Windows**: IE, Edge [Deprecated]  |
 | ```(prefers-color-scheme: dark)``` (Dark Mode not High Contrast mode) | **macOS**: Safari, Chrome; **Windows**: Safari, Chrome, Chredge (Chromium Edge) |
 | ```(forced-colors: active)``` | **macOS**: not supported; **Windows**: Chredge (Chromium Edge) |
 
