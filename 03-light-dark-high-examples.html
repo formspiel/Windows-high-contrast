@@ -37,10 +37,8 @@
                 --color-bg-box: Canvas;
                 --color-text:   CanvasText;
                 --color-link:   ActiveText;
-            }
-            
-            text {
-               fill: var(--color-text);
+                
+                fill: var(--color-text);
             }
 
         }
@@ -54,29 +52,6 @@
 
         body {
             background-color: var(--color-bg);
-        }
-
-        .box {
-            width: var(--height);
-            height: var(--height);
-            margin: auto;
-            color: var(--color-text);
-            background-color: var(--color-bg-box);
-            border: 1px solid var(--color-text);
-            text-align: center;
-            line-height: var(--height);
-        }
-        
-        @media (prefers-color-scheme: dark) {
-            .box::after {
-                content: " in the dark";
-            }
-        }
-
-        @media (forced-colors), (-ms-high-contrast: active)  {
-            .box::after {
-                content: " in the very dark";
-            }
         }
     </style>
 </head>
