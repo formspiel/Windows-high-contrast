@@ -42,17 +42,17 @@ Full media query example for old and new contrast mode support:
 ```@media screen and (-ms-high-contrast: active), (forced-colors: active) {}```
 
 ## Windows System High Contrast Colours
-| System Colour | Description |
-|---|---|
-| Canvas | Background of application content or documents.  |
-| CanvasText | Text in application content or documents. |
-| LinkText | Text in non-active, non-visited links. |
-| VisitedText | Text in visited links. |
-| ActiveText | Text in active links. |
-| ButtonFace | The face background color for push buttons. |
-| ButtonText | Text on push buttons. |
-| Field | Background of input fields. |
-| FieldText | Text in input fields. |
-| Highlight | Background of item(s) selected in a control. |
-| HighlightText | Text of item(s) selected in a control. |
-| GrayText | Disabled text. (Often, but not necessarily, gray.) |
+| System Colour | Windows 10 Label | Description | Default High Contrast Black
+|---|---|---|---|
+| Canvas | Background | Background of application content or documents. | ![#000000](https://placehold.co/15x15/000000/000000.png) `#000000`
+| CanvasText | Text | Text in application content or documents. | ![#FFFFFF](https://placehold.co/15x15/FFFFFF/FFFFFF.png) `#FFFFFF`
+| LinkText | Hyperlink | Text in non-active, non-visited links. | ![#FFFF00](https://placehold.co/15x15/FFFF00/FFFF00.png) `#FFFF00`
+| VisitedText | tbd | Text in visited links. | tbd
+| ActiveText | tbd | Text in active links. | tbd
+| ButtonFace | tbd  | The face background color for push buttons. | ![#000000](https://placehold.co/15x15/000000/000000.png) `#000000`
+| ButtonText | Button Text | Text on push buttons. | ![#FFFFFF](https://placehold.co/15x15/FFFFFF/FFFFFF.png) `#FFFFFF`
+| Field | tbd | Background of input fields. | tbd
+| FieldText | tbd | Text in input fields. | tbd
+| Highlight | | Background of item(s) selected in a control. | ![#000000](https://placehold.co/15x15/000000/000000.png) `#000000`
+| HighlightText | Selected Text | Text of item(s) selected in a control. | ![#1AEBFF](https://placehold.co/15x15/1AEBFF/1AEBFF.png) `#1AEBFF`
+| GrayText | Disabled Text | Disabled text. (Often, but not necessarily, gray.) | ![#3FF23F](https://placehold.co/15x15/3FF23F/3FF23F.png) `#3FF23F`
